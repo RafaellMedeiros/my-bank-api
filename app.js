@@ -16,5 +16,6 @@ const app = express()
 
 app.use(express.json())
 app.use(bankRoutes)
+app.search("port", PORT)
 
-app.listen(3001, () => console.log('API INICIADA'))
+app.listen( process.env.PORT || 3001, () => console.log('API INICIADA'))
